@@ -14,7 +14,7 @@ print(num_T)
 # ** your code **
 part1 = sequence[0:3]
 lower1 = sequence[3:9].lower()
-part2 = sequence[9:]
+part2 =sequence[9:]
 new_seq = part1+lower1+part2
 print(new_seq)
 
@@ -58,10 +58,8 @@ tr_obj = open("trimmed.txt", "w")
 
 ## step 3: read in each line in the adapter_input file and trim the first 14 characters. Write the remaining sequence to the output file. Do this for each line. Don't forget to close() to save the file. 
 adapter = "ATTCGATTATAAGC"
+
 with ad_obj as infile, tr_obj as outfile:
     for line in infile:
        trimmed_line = line.replace(adapter,"")
        outfile.write(trimmed_line)
-
-
-          
